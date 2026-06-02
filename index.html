@@ -84,4 +84,100 @@ nav{background:var(--white);border-bottom:1px solid rgba(184,150,90,0.2);positio
 .cat-symbol{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:48px;opacity:0.8}
 .cat-content{position:absolute;bottom:0;left:0;right:0;padding:20px;text-align:center;background:#FFFFFF}
 .cat-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--dark);letter-spacing:0.05em}
-.cat-count{color:var(--muted);font-size:11px;letter-spacing:0.15
+.cat-count{color:var(--muted);font-size:11px;letter-spacing:0.15em;text-transform:uppercase;margin-top:4px}
+
+/* PRODUCTS */
+.products-section{background:var(--white);padding:40px 0}
+.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;max-width:1300px;margin:0 auto}
+.prod-card{position:relative;cursor:pointer;background:#FFFFFF;border:1px solid #F0F0F0;transition:all 0.3s}
+.prod-card:hover {box-shadow: 0 10px 25px rgba(0,0,0,0.05);}
+.prod-img{aspect-ratio:1;overflow:hidden;position:relative;background:#FAFAFA;display:flex;align-items:center;justify-content:center;}
+.prod-visual{font-size:70px;transition:transform 0.5s ease}
+.prod-card:hover .prod-visual{transform:scale(1.08)}
+.prod-badge{position:absolute;top:16px;left:16px;background:var(--gold);color:var(--white);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 10px}
+.prod-info{padding:20px 24px 16px;text-align:center}
+.prod-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--dark);margin-bottom:6px}
+.prod-sub{color:var(--muted);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
+.prod-price{display:flex;align-items:baseline;justify-content:center;gap:10px;flex-wrap:wrap}
+.price-now{font-size:18px;font-weight:500;color:var(--dark)}
+.price-was{font-size:14px;color:var(--muted);text-decoration:line-through}
+
+.add-btn{display:block;width:calc(100% - 48px);margin:10px 24px 24px;background:var(--dark);border:1px solid var(--dark);color:var(--white);padding:12px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.3s;}
+.add-btn:hover{background:var(--gold);border-color:var(--gold)}
+
+/* RITUAL */
+.ritual{background:#FAFAFA;padding:100px 40px;text-align:center;border-top:1px solid #F0F0F0;border-bottom:1px solid #F0F0F0}
+.ritual h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,56px);font-weight:300;color:var(--dark);margin-bottom:20px}
+.ritual h2 em{color:var(--gold);font-style:italic}
+.ritual p{color:var(--muted);font-size:16px;max-width:540px;margin:0 auto 40px;line-height:1.8}
+
+/* TRUST */
+.trust{padding:64px 40px;background:#FFFFFF}
+.trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
+.trust-icon{font-size:32px;margin-bottom:12px}
+.trust-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--dark);margin-bottom:4px}
+.trust-desc{color:var(--muted);font-size:13px;line-height:1.5}
+
+/* NEWSLETTER */
+.newsletter{background:var(--dark);padding:80px 40px;text-align:center}
+.newsletter h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--white);margin-bottom:12px}
+.newsletter p{color:rgba(255,255,255,0.45);margin-bottom:36px;font-size:15px}
+.nl-form{display:flex;max-width:480px;margin:0 auto}
+.nl-form input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-right:none;color:var(--white);padding:14px 20px;font-family:'Jost',sans-serif;font-size:14px;outline:none}
+.nl-form input::placeholder{color:rgba(255,255,255,0.3)}
+.nl-form button{background:var(--gold);color:var(--dark);border:none;padding:14px 28px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:background 0.2s;white-space:nowrap}
+.nl-form button:hover{background:var(--gold-light)}
+
+/* FOOTER */
+footer{background:#111111;padding:60px 40px 32px;color:rgba(255,255,255,0.4)}
+.footer-inner{max-width:1300px;margin:0 auto}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
+.footer-brand h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--white);margin-bottom:16px}
+.footer-brand p{font-size:13px;line-height:1.7;max-width:280px}
+.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap;gap:16px}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .cat-grid{grid-template-columns:repeat(2,1fr)}
+  .prod-grid{grid-template-columns:repeat(2,1fr)}
+  .trust-inner{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .nav-inner{padding:0 20px}
+  .section{padding:60px 20px}
+  .cat-grid{grid-template-columns:repeat(2,1fr);gap:10px}
+  .prod-grid{grid-template-columns:1fr}
+  .trust-inner{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<div class="announce" id="txt-announce">✦ $75-ზე მეტი შეკვეთით უფასო მიწოდება · განზრახვით შერჩეული ✦</div>
+
+<nav>
+  <div class="nav-inner">
+    <ul class="nav-links">
+      <li><a href="#bestsellers">Best Sellers</a></li>
+      <li><a href="#collections">Malas</a></li>
+      <li><a href="#collections">Bracelets</a></li>
+    </ul>
+    
+    <div class="logo"><h1>Kristal</h1></div>
+    
+    <div class="nav-icons">
+      <a href="#" id="cart-link">კალათა (0)</a>
+      
+      <div class="lang-switcher">
+        <button class="lang-btn active" onclick="setLang('ka', this)">ქარ</button>
+        <button class="lang-btn" onclick="setLang('ru', this)">Рус</button>
+        <button class="lang-btn" onclick="setLang('kk', this)">Қаз</button>
+      </div>
+    </div>
+    
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button
