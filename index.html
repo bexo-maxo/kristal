@@ -1,21 +1,21 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ka">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sacred Stone — Crystal & Healing Collections</title>
+<title>Kristal — Handmade Protective Jewelry</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
-  --cream:#F7F4EE;
-  --warm:#EDE8DF;
+  --cream:#FFFFFF;
+  --warm:#F9F9F9;
   --gold:#B8965A;
   --gold-light:#D4B078;
   --dark:#1C1812;
   --mid:#4A4035;
   --muted:#8C7E6E;
-  --white:#FEFCF8;
+  --white:#FFFFFF;
 }
 body{font-family:'Jost',sans-serif;background:var(--cream);color:var(--dark);overflow-x:hidden}
 
@@ -28,44 +28,45 @@ nav{background:var(--white);border-bottom:1px solid rgba(184,150,90,0.2);positio
 .nav-links{display:flex;gap:32px;list-style:none}
 .nav-links a{text-decoration:none;color:var(--mid);font-size:13px;letter-spacing:0.12em;text-transform:uppercase;transition:color 0.2s}
 .nav-links a:hover{color:var(--gold)}
+
+/* Premium Uppercase Logo Style */
 .logo{text-align:center;flex:1}
-.logo h1{font-family:'Cormorant Garamond',serif;font-size:28px;font-weight:300;letter-spacing:0.15em;color:var(--dark)}
-.logo span{color:var(--gold)}
+.logo h1{font-family:'Cormorant Garamond',serif;font-size:32px;font-weight:300;letter-spacing:0.3em;color:var(--dark);text-transform:uppercase}
+
 .nav-icons{display:flex;gap:20px;align-items:center}
 .nav-icons a{color:var(--mid);text-decoration:none;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;cursor:pointer;transition:color 0.2s}
 .nav-icons a:hover{color:var(--gold)}
+
+/* Clean Inline Language Switcher */
+.lang-switcher{display:flex;gap:8px;align-items:center}
+.lang-btn{background:none;border:1px solid rgba(184,150,90,0.3);color:var(--muted);font-family:'Jost',sans-serif;font-size:11px;letter-spacing:0.15em;padding:5px 10px;cursor:pointer;transition:all 0.2s;text-transform:uppercase}
+.lang-btn:hover, .lang-btn.active{border-color:var(--gold);color:var(--gold)}
+
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
 .hamburger span{width:24px;height:1.5px;background:var(--dark);display:block;transition:all 0.3s}
 .mobile-menu{display:none;position:fixed;top:72px;left:0;right:0;background:var(--white);border-bottom:1px solid rgba(184,150,90,0.2);z-index:99;padding:24px 40px;flex-direction:column;gap:20px}
 .mobile-menu.open{display:flex}
 .mobile-menu a{text-decoration:none;color:var(--mid);font-size:13px;letter-spacing:0.15em;text-transform:uppercase;padding:8px 0;border-bottom:1px solid rgba(184,150,90,0.1)}
+.mobile-lang-selectors { display: flex; gap: 10px; margin-top: 10px; }
+.mobile-lang-selectors button { background: none; border: 1px solid #ddd; padding: 5px 10px; font-size: 12px; cursor: pointer; }
 
-/* HERO */
-.hero{position:relative;height:88vh;min-height:560px;overflow:hidden;display:flex;align-items:center;justify-content:center}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 60% 40%,#2D2419 0%,#0E0C09 100%)}
-.hero-orbs{position:absolute;inset:0;pointer-events:none}
-.orb{position:absolute;border-radius:50%;opacity:0.15}
-.orb1{width:500px;height:500px;background:var(--gold);top:-100px;right:-100px;animation:breathe 8s ease-in-out infinite}
-.orb2{width:300px;height:300px;background:#8B6B3D;bottom:-50px;left:-50px;animation:breathe 6s ease-in-out infinite 2s}
-.orb3{width:200px;height:200px;background:#C4956A;top:40%;left:20%;animation:breathe 10s ease-in-out infinite 1s}
-@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
+/* HERO (White Elegant Version) */
+.hero{position:relative;height:80vh;min-height:500px;overflow:hidden;display:flex;align-items:center;justify-content:center;background:#FFFFFF;border-bottom:1px solid #F0F0F0}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 20px}
-.hero-eyebrow{color:var(--gold-light);font-size:11px;letter-spacing:0.35em;text-transform:uppercase;margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.2s forwards}
-.hero h2{font-family:'Cormorant Garamond',serif;font-size:clamp(52px,8vw,96px);font-weight:300;color:var(--white);line-height:1.05;margin-bottom:24px;opacity:0;animation:fadeUp 0.8s 0.4s forwards}
-.hero h2 em{color:var(--gold-light);font-style:italic}
-.hero p{color:rgba(255,255,255,0.55);font-size:16px;max-width:480px;margin:0 auto 40px;line-height:1.7;opacity:0;animation:fadeUp 0.8s 0.6s forwards}
-.hero-btns{display:flex;gap:16px;justify-content:center;opacity:0;animation:fadeUp 0.8s 0.8s forwards;flex-wrap:wrap}
-.btn-primary{background:var(--gold);color:var(--dark);padding:14px 36px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;font-family:'Jost',sans-serif;display:inline-block}
-.btn-primary:hover{background:var(--gold-light);transform:translateY(-1px)}
-.btn-outline{border:1px solid rgba(255,255,255,0.3);color:var(--white);padding:14px 36px;font-size:12px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;font-family:'Jost',sans-serif;display:inline-block}
-.btn-outline:hover{border-color:var(--gold-light);color:var(--gold-light)}
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.hero-eyebrow{color:var(--gold);font-size:12px;letter-spacing:0.35em;text-transform:uppercase;margin-bottom:24px}
+.hero h2{font-family:'Cormorant Garamond',serif;font-size:clamp(44px,7vw,80px);font-weight:300;color:var(--dark);line-height:1.1;margin-bottom:24px}
+.hero h2 em{color:var(--gold);font-style:italic}
+.hero p{color:var(--muted);font-size:16px;max-width:520px;margin:0 auto 40px;line-height:1.7}
+.hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn-primary{background:var(--dark);color:var(--white);padding:14px 36px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;font-family:'Jost',sans-serif;display:inline-block}
+.btn-primary:hover{background:var(--gold);transform:translateY(-1px)}
+.btn-outline{border:1px solid var(--dark);color:var(--dark);padding:14px 36px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;text-decoration:none;transition:all 0.3s;font-family:'Jost',sans-serif;display:inline-block}
+.btn-outline:hover{border-color:var(--gold);color:var(--gold)}
 
 /* MARQUEE */
-.marquee-wrap{background:var(--gold);padding:14px 0;overflow:hidden}
+.marquee-wrap{background:var(--dark);padding:14px 0;overflow:hidden}
 .marquee-track{display:flex;white-space:nowrap;animation:marquee 20s linear infinite}
-.marquee-item{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--dark);padding:0 40px;font-weight:500}
-.marquee-dot{color:rgba(28,24,18,0.4);margin:0 4px}
+.marquee-item{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gold-light);padding:0 40px;font-weight:400}
 @keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* SECTIONS */
@@ -78,466 +79,9 @@ nav{background:var(--white);border-bottom:1px solid rgba(184,150,90,0.2);positio
 /* CATEGORIES */
 .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
 .cat-card{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:3/4}
-.cat-bg{position:absolute;inset:0;transition:transform 0.6s ease}
-.cat-card:hover .cat-bg{transform:scale(1.05)}
-.cat-card:nth-child(1) .cat-bg{background:linear-gradient(160deg,#2A1F3D 0%,#4A3060 100%)}
-.cat-card:nth-child(2) .cat-bg{background:linear-gradient(160deg,#1A2D2A 0%,#2A4A3D 100%)}
-.cat-card:nth-child(3) .cat-bg{background:linear-gradient(160deg,#3D2A1A 0%,#5A3D22 100%)}
-.cat-card:nth-child(4) .cat-bg{background:linear-gradient(160deg,#1A2535 0%,#243A52 100%)}
-.cat-symbol{position:absolute;top:50%;left:50%;transform:translate(-50%,-60%);font-size:64px;opacity:0.25;transition:opacity 0.3s}
-.cat-card:hover .cat-symbol{opacity:0.4}
-.cat-content{position:absolute;bottom:0;left:0;right:0;padding:28px 24px;background:linear-gradient(transparent,rgba(0,0,0,0.7))}
-.cat-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:400;color:var(--white);letter-spacing:0.05em}
-.cat-count{color:rgba(255,255,255,0.5);font-size:12px;letter-spacing:0.15em;text-transform:uppercase;margin-top:4px}
-
-/* PRODUCTS */
-.products-section{background:var(--white);padding:80px 0}
-.prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1300px;margin:0 auto}
-.prod-card{position:relative;cursor:pointer;overflow:hidden;background:var(--cream)}
-.prod-img{aspect-ratio:1;overflow:hidden;position:relative}
-.prod-visual{width:100%;height:100%;display:flex;align-items:center;justify-content:center;font-size:80px;transition:transform 0.5s ease}
-.prod-card:hover .prod-visual{transform:scale(1.08)}
-.prod-badge{position:absolute;top:16px;left:16px;background:var(--dark);color:var(--gold-light);font-size:10px;letter-spacing:0.2em;text-transform:uppercase;padding:5px 10px}
-.prod-info{padding:20px 24px 16px}
-.prod-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--dark);margin-bottom:4px}
-.prod-sub{color:var(--muted);font-size:12px;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:12px}
-.prod-price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
-.price-now{font-size:18px;font-weight:500;color:var(--dark)}
-.price-was{font-size:14px;color:var(--muted);text-decoration:line-through}
-.price-save{font-size:11px;color:var(--gold);letter-spacing:0.1em;text-transform:uppercase}
-.add-btn{display:block;width:calc(100% - 48px);margin:16px 24px 24px;background:transparent;border:1px solid var(--dark);color:var(--dark);padding:12px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;transition:all 0.3s;opacity:0;transform:translateY(8px)}
-.prod-card:hover .add-btn{opacity:1;transform:translateY(0)}
-.add-btn:hover{background:var(--dark);color:var(--white)}
-.p1-bg{background:linear-gradient(135deg,#2A1F3D,#6B4E8A)}
-.p2-bg{background:linear-gradient(135deg,#1A2D2A,#3D7A5A)}
-.p3-bg{background:linear-gradient(135deg,#3D2A1A,#8B5E3C)}
-.p4-bg{background:linear-gradient(135deg,#2A2010,#6B5E2A)}
-.p5-bg{background:linear-gradient(135deg,#1A2535,#3D6B8A)}
-.p6-bg{background:linear-gradient(135deg,#2D1F35,#7A4A6B)}
-
-/* RITUAL */
-.ritual{background:var(--dark);padding:100px 40px;text-align:center;position:relative;overflow:hidden}
-.ritual-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(184,150,90,0.12) 0%,transparent 70%)}
-.ritual h2{font-family:'Cormorant Garamond',serif;font-size:clamp(36px,5vw,64px);font-weight:300;color:var(--white);position:relative;z-index:2;margin-bottom:20px}
-.ritual h2 em{color:var(--gold-light);font-style:italic}
-.ritual p{color:rgba(255,255,255,0.5);font-size:16px;max-width:540px;margin:0 auto 40px;line-height:1.8;position:relative;z-index:2}
-.ritual a{position:relative;z-index:2}
-
-/* TRUST */
-.trust{padding:64px 40px;background:var(--warm)}
-.trust-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:32px;text-align:center}
-.trust-icon{font-size:32px;margin-bottom:12px}
-.trust-title{font-family:'Cormorant Garamond',serif;font-size:18px;font-weight:400;color:var(--dark);margin-bottom:4px}
-.trust-desc{color:var(--muted);font-size:13px;line-height:1.5}
-
-/* TESTIMONIALS */
-.testi-section{padding:80px 40px;background:var(--white)}
-.testi-header{max-width:1100px;margin:0 auto 48px;text-align:center}
-.testi-grid{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.testi-card{background:var(--cream);padding:32px}
-.testi-stars{color:var(--gold);font-size:14px;margin-bottom:16px;letter-spacing:3px}
-.testi-text{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--mid);line-height:1.6;margin-bottom:20px}
-.testi-author{font-size:12px;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted)}
-
-/* NEWSLETTER */
-.newsletter{background:var(--dark);padding:80px 40px;text-align:center}
-.newsletter h2{font-family:'Cormorant Garamond',serif;font-size:40px;font-weight:300;color:var(--white);margin-bottom:12px}
-.newsletter p{color:rgba(255,255,255,0.45);margin-bottom:36px;font-size:15px}
-.nl-form{display:flex;max-width:480px;margin:0 auto}
-.nl-form input{flex:1;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);border-right:none;color:var(--white);padding:14px 20px;font-family:'Jost',sans-serif;font-size:14px;outline:none}
-.nl-form input::placeholder{color:rgba(255,255,255,0.3)}
-.nl-form button{background:var(--gold);color:var(--dark);border:none;padding:14px 28px;font-size:11px;letter-spacing:0.2em;text-transform:uppercase;cursor:pointer;font-family:'Jost',sans-serif;font-weight:500;transition:background 0.2s;white-space:nowrap}
-.nl-form button:hover{background:var(--gold-light)}
-
-/* FOOTER */
-footer{background:#0E0C09;padding:60px 40px 32px;color:rgba(255,255,255,0.4)}
-.footer-inner{max-width:1300px;margin:0 auto}
-.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:40px;margin-bottom:48px}
-.footer-brand h3{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:300;color:var(--white);margin-bottom:16px}
-.footer-brand h3 span{color:var(--gold)}
-.footer-brand p{font-size:13px;line-height:1.7;max-width:280px}
-.footer-col h4{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--white);margin-bottom:20px}
-.footer-col ul{list-style:none}
-.footer-col li{margin-bottom:10px}
-.footer-col a{color:rgba(255,255,255,0.4);text-decoration:none;font-size:13px;transition:color 0.2s}
-.footer-col a:hover{color:var(--gold-light)}
-.footer-bottom{border-top:1px solid rgba(255,255,255,0.08);padding-top:24px;display:flex;justify-content:space-between;align-items:center;font-size:12px;flex-wrap:wrap;gap:16px}
-.payment-icons{display:flex;gap:8px;flex-wrap:wrap}
-.pay-badge{background:rgba(255,255,255,0.08);padding:4px 10px;font-size:10px;letter-spacing:0.1em;color:rgba(255,255,255,0.4);border-radius:2px}
-
-/* RESPONSIVE */
-@media(max-width:900px){
-  .cat-grid{grid-template-columns:repeat(2,1fr)}
-  .prod-grid{grid-template-columns:repeat(2,1fr)}
-  .trust-inner{grid-template-columns:repeat(2,1fr)}
-  .testi-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr}
-}
-@media(max-width:600px){
-  .nav-links,.nav-icons{display:none}
-  .hamburger{display:flex}
-  .nav-inner{padding:0 20px}
-  .section{padding:60px 20px}
-  .cat-grid{grid-template-columns:repeat(2,1fr);gap:10px}
-  .prod-grid{grid-template-columns:1fr}
-  .trust-inner{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .ritual{padding:60px 20px}
-  .trust{padding:48px 20px}
-  .testi-section{padding:60px 20px}
-  .newsletter{padding:60px 20px}
-  footer{padding:48px 20px 24px}
-  .add-btn{opacity:1;transform:translateY(0)}
-}
-</style>
-</head>
-<body>
-
-<div class="announce">✦ Free shipping on orders over $75 · Handpicked with intention ✦</div>
-
-<nav>
-  <div class="nav-inner">
-    <ul class="nav-links">
-      <li><a href="#bestsellers">Best Sellers</a></li>
-      <li><a href="#collections">Malas</a></li>
-      <li><a href="#collections">Bracelets</a></li>
-      <li><a href="#collections">Pendants</a></li>
-    </ul>
-    <div class="logo"><h1>✦ <span>Sacred</span> Stone ✦</h1></div>
-    <div class="nav-icons">
-      <a href="#collections">Artifacts</a>
-      <a href="#" id="cart-link">Cart (0)</a>
-    </div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-  <div class="mobile-menu" id="mobileMenu">
-    <a href="#bestsellers">Best Sellers</a>
-    <a href="#collections">Malas</a>
-    <a href="#collections">Bracelets</a>
-    <a href="#collections">Pendants</a>
-    <a href="#collections">Artifacts</a>
-    <a href="#">Track Order</a>
-  </div>
-</nav>
-
-<section class="hero">
-  <div class="hero-bg"></div>
-  <div class="hero-orbs">
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
-    <div class="orb orb3"></div>
-  </div>
-  <div class="hero-content">
-    <p class="hero-eyebrow">✦ Curated Crystal & Healing Collections ✦</p>
-    <h2>Awaken Your<br><em>Sacred Energy</em></h2>
-    <p>Handpicked crystals, malas, and spiritual artifacts — each piece chosen to guide your journey toward balance and clarity.</p>
-    <div class="hero-btns">
-      <a href="#bestsellers" class="btn-primary">Shop Best Sellers</a>
-      <a href="#ritual" class="btn-outline">Our Story</a>
-    </div>
-  </div>
-</section>
-
-<div class="marquee-wrap">
-  <div class="marquee-track">
-    <span class="marquee-item">Handcrafted with intention <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Ethically sourced crystals <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Free shipping over $75 <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">30-day returns <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Cleansed under moonlight <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Handcrafted with intention <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Ethically sourced crystals <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Free shipping over $75 <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">30-day returns <span class="marquee-dot">✦</span></span>
-    <span class="marquee-item">Cleansed under moonlight <span class="marquee-dot">✦</span></span>
-  </div>
-</div>
-
-<section class="section" id="collections">
-  <div class="section-header">
-    <p class="section-eyebrow">✦ Explore</p>
-    <h2 class="section-title">Shop by <em>Collection</em></h2>
-  </div>
-  <div class="cat-grid">
-    <div class="cat-card">
-      <div class="cat-bg"></div>
-      <div class="cat-symbol">🔮</div>
-      <div class="cat-content">
-        <div class="cat-name">Mala Necklaces</div>
-        <div class="cat-count">24 pieces</div>
-      </div>
-    </div>
-    <div class="cat-card">
-      <div class="cat-bg"></div>
-      <div class="cat-symbol">📿</div>
-      <div class="cat-content">
-        <div class="cat-name">Bracelets</div>
-        <div class="cat-count">36 pieces</div>
-      </div>
-    </div>
-    <div class="cat-card">
-      <div class="cat-bg"></div>
-      <div class="cat-symbol">✨</div>
-      <div class="cat-content">
-        <div class="cat-name">Pendants</div>
-        <div class="cat-count">18 pieces</div>
-      </div>
-    </div>
-    <div class="cat-card">
-      <div class="cat-bg"></div>
-      <div class="cat-symbol">🔯</div>
-      <div class="cat-content">
-        <div class="cat-name">Artifacts</div>
-        <div class="cat-count">12 pieces</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="products-section" id="bestsellers">
-  <div class="section" style="padding-bottom:0">
-    <div class="section-header">
-      <p class="section-eyebrow">✦ Most Loved</p>
-      <h2 class="section-title">Best <em>Sellers</em></h2>
-    </div>
-  </div>
-  <div class="prod-grid">
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p1-bg">🔮</div>
-        <div class="prod-badge">Sale</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">Tibetan Bracelet of Fortune</div>
-        <div class="prod-sub">Protection · Abundance</div>
-        <div class="prod-price">
-          <span class="price-now">$28.70</span>
-          <span class="price-was">$66.00</span>
-          <span class="price-save">Save $37</span>
-        </div>
-      </div>
-      <button class="add-btn" onclick="addToCart('Tibetan Bracelet of Fortune', 28.70)">Add to Cart</button>
-    </div>
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p2-bg">📿</div>
-        <div class="prod-badge">Sale</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">Lapis Lazuli Third Eye Mala</div>
-        <div class="prod-sub">Wisdom · Intuition</div>
-        <div class="prod-price">
-          <span class="price-now">$44.70</span>
-          <span class="price-was">$99.30</span>
-          <span class="price-save">Save $55</span>
-        </div>
-      </div>
-      <button class="add-btn" onclick="addToCart('Lapis Lazuli Third Eye Mala', 44.70)">Add to Cart</button>
-    </div>
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p3-bg">🧿</div>
-        <div class="prod-badge">Sale</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">Brainwave Activation Bracelet</div>
-        <div class="prod-sub">Clarity · Focus</div>
-        <div class="prod-price">
-          <span class="price-now">$27.50</span>
-          <span class="price-was">$50.00</span>
-          <span class="price-save">Save $23</span>
-        </div>
-      </div>
-      <button class="add-btn" onclick="addToCart('Brainwave Activation Bracelet', 27.50)">Add to Cart</button>
-    </div>
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p4-bg">💛</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">Citrine Mala of Financial Blessings</div>
-        <div class="prod-sub">Prosperity · Manifestation</div>
-        <div class="prod-price"><span class="price-now">$69.00</span></div>
-      </div>
-      <button class="add-btn" onclick="addToCart('Citrine Mala of Financial Blessings', 69.00)">Add to Cart</button>
-    </div>
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p5-bg">🌀</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">Third Eye Chakra Orgone Pyramid</div>
-        <div class="prod-sub">Vision · Awakening</div>
-        <div class="prod-price"><span class="price-now">$33.00</span></div>
-      </div>
-      <button class="add-btn" onclick="addToCart('Third Eye Chakra Orgone Pyramid', 33.00)">Add to Cart</button>
-    </div>
-    <div class="prod-card">
-      <div class="prod-img">
-        <div class="prod-visual p6-bg">🪬</div>
-      </div>
-      <div class="prod-info">
-        <div class="prod-name">7 Treasures Chakra Balance Necklace</div>
-        <div class="prod-sub">Harmony · Balance</div>
-        <div class="prod-price"><span class="price-now">$33.00</span></div>
-      </div>
-      <button class="add-btn" onclick="addToCart('7 Treasures Chakra Balance Necklace', 33.00)">Add to Cart</button>
-    </div>
-  </div>
-</div>
-
-<div class="ritual" id="ritual">
-  <div class="ritual-glow"></div>
-  <h2>Every piece is <em>cleansed</em><br>before it reaches you</h2>
-  <p>We believe intention matters. Each crystal is energetically cleansed under a full moon and charged with positive energy before being carefully packaged and sent to you.</p>
-  <a href="#" class="btn-primary">Learn Our Process</a>
-</div>
-
-<div class="trust">
-  <div class="trust-inner">
-    <div>
-      <div class="trust-icon">🌙</div>
-      <div class="trust-title">Moon-Cleansed</div>
-      <div class="trust-desc">Every piece charged under the full moon before shipping</div>
-    </div>
-    <div>
-      <div class="trust-icon">🌍</div>
-      <div class="trust-title">Ethically Sourced</div>
-      <div class="trust-desc">Responsibly mined from trusted partners worldwide</div>
-    </div>
-    <div>
-      <div class="trust-icon">📦</div>
-      <div class="trust-title">Free Shipping $75+</div>
-      <div class="trust-desc">Lovingly packaged and shipped worldwide</div>
-    </div>
-    <div>
-      <div class="trust-icon">🔄</div>
-      <div class="trust-title">30-Day Returns</div>
-      <div class="trust-desc">Not resonating? Return within 30 days, no questions asked</div>
-    </div>
-  </div>
-</div>
-
-<div class="testi-section">
-  <div class="testi-header">
-    <p class="section-eyebrow">✦ From Our Community</p>
-    <h2 class="section-title">Their <em>Journeys</em></h2>
-  </div>
-  <div class="testi-grid">
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"The Lapis Lazuli mala arrived even more beautiful than the photos. I feel a genuine sense of calm when I wear it during meditation."</div>
-      <div class="testi-author">— Sarah M., verified buyer</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"I gifted the Citrine pyramid to my sister and she cried — it was exactly what she needed. The packaging alone felt sacred."</div>
-      <div class="testi-author">— James K., verified buyer</div>
-    </div>
-    <div class="testi-card">
-      <div class="testi-stars">★★★★★</div>
-      <div class="testi-text">"Third order now. The quality is consistently stunning and I love that each piece comes with an intention card explaining the crystal's energy."</div>
-      <div class="testi-author">— Priya L., verified buyer</div>
-    </div>
-  </div>
-</div>
-
-<div class="newsletter">
-  <h2>Walk the path with us</h2>
-  <p>Join 40,000+ seekers. Receive crystal wisdom, new arrivals, and exclusive rituals.</p>
-  <div class="nl-form">
-    <input type="email" placeholder="Your email address" id="nlEmail">
-    <button onclick="subscribe()">Subscribe</button>
-  </div>
-</div>
-
-<footer>
-  <div class="footer-inner">
-    <div class="footer-grid">
-      <div class="footer-brand">
-        <h3>✦ <span>Sacred</span> Stone ✦</h3>
-        <p>Handpicked crystals and spiritual tools to support your journey toward balance, clarity, and sacred living.</p>
-      </div>
-      <div class="footer-col">
-        <h4>Collections</h4>
-        <ul>
-          <li><a href="#bestsellers">Best Sellers</a></li>
-          <li><a href="#collections">Mala Necklaces</a></li>
-          <li><a href="#collections">Bracelets</a></li>
-          <li><a href="#collections">Pendants</a></li>
-          <li><a href="#collections">Artifacts</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Help</h4>
-        <ul>
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-          <li><a href="#">Shipping</a></li>
-          <li><a href="#">Returns</a></li>
-          <li><a href="#">Track Order</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="#">Instagram</a></li>
-          <li><a href="#">Facebook</a></li>
-          <li><a href="#">Pinterest</a></li>
-          <li><a href="#">Crystal Guide</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Sacred Stone · All rights reserved</span>
-      <div class="payment-icons">
-        <span class="pay-badge">VISA</span>
-        <span class="pay-badge">MC</span>
-        <span class="pay-badge">AMEX</span>
-        <span class="pay-badge">PayPal</span>
-        <span class="pay-badge">Shop Pay</span>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  var cartCount = 0;
-
-  function toggleMenu() {
-    var menu = document.getElementById('mobileMenu');
-    menu.classList.toggle('open');
-  }
-
-  function addToCart(name, price) {
-    cartCount++;
-    document.getElementById('cart-link').textContent = 'Cart (' + cartCount + ')';
-    alert('✦ Added to cart: ' + name + ' — $' + price.toFixed(2));
-  }
-
-  function subscribe() {
-    var email = document.getElementById('nlEmail').value;
-    if (email && email.includes('@')) {
-      alert('✦ Thank you for joining the Sacred Stone community!');
-      document.getElementById('nlEmail').value = '';
-    } else {
-      alert('Please enter a valid email address.');
-    }
-  }
-
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
-    anchor.addEventListener('click', function(e) {
-      var target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        document.getElementById('mobileMenu').classList.remove('open');
-      }
-    });
-  });
-</script>
-</body>
-</html>
+.cat-bg{position:absolute;inset:0;transition:transform 0.6s ease;background:#F9F9F9;border:1px solid #EEE;}
+.cat-card:hover .cat-bg{transform:scale(1.03)}
+.cat-symbol{position:absolute;top:45%;left:50%;transform:translate(-50%,-50%);font-size:48px;opacity:0.8}
+.cat-content{position:absolute;bottom:0;left:0;right:0;padding:20px;text-align:center;background:#FFFFFF}
+.cat-name{font-family:'Cormorant Garamond',serif;font-size:20px;font-weight:400;color:var(--dark);letter-spacing:0.05em}
+.cat-count{color:var(--muted);font-size:11px;letter-spacing:0.15
